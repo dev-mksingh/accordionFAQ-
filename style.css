@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background:linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.container {
+    width: 80%;
+    max-width: 500px;
+    height: 100vh;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+
+header img {
+    width: 300px;
+    display: block;
+    margin: auto;
+    position: relative;
+}
+
+.header-background {
+    background-image: url('images/bg-pattern-mobile.svg');
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position: 0% 80%;
+    position: relative;
+    top: -100px;
+    padding-bottom: 90px;
+}
+
+.header-background1, .box{
+    display: none;
+}
+
+main {
+    width: 80%;
+    height: 60vh;
+    margin: auto;
+    margin-top: -90px;
+}
+
+section {
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+    width: 90%;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+input {
+    position: relative;
+    left: -100px;
+}
+
+label {
+    font-size: 14px;
+}
+
+label:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+p {
+    font-size: 12px;
+    font-weight: 400;
+    width: 100%;
+    padding: 15px;
+}
+
+.block {
+    font-size: 12px;
+    display: none;
+    padding-top: 10px;
+}
+
+input:checked + label{
+    font-weight: 700;
+}
+
+.img {
+    transform: rotate(180deg);
+}
+
+
+section img {
+    width: 16px;
+    height: 12px;
+    position: absolute;
+    right: 0;
+}
+
+@media screen and (min-width: 756px) {
+
+    .container {
+        width: 90%;
+        max-width: 900px;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        margin-top: 20vh;
+        border: 1px solid black;
+    }
+
+    .container > * {
+        flex-basis:50%;
+    }
+
+    header {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .header-background {
+        display: none;
+    }
+
+    .box {
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 80px;
+        left: -20px;
+    }
+
+    .header-background1 {
+        height: 45vh;
+        display: block;
+        top: 0;
+        left: -50px;
+        background-image: url('images/bg-pattern-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding-bottom: 50px;
+    }
+
+    main {
+        margin-top: 0;
+        padding-top: 50px;
+    }
+
+    main > * {
+        text-align: left;
+    }
+}
